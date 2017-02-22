@@ -6,7 +6,7 @@ var holder ="";
         var ind=0;
         var gate=0;
         var next = 0;
-        var permuda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        var permuda = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", " "];
         word = word.toLowerCase();
         var polygon = [];
         for (ind=0; ind<word.length;ind++) {
@@ -30,9 +30,11 @@ var holder ="";
         return holder;
     }
 
-    function permuteAll(eyedeeone, eyedeetwo) {
+    function permuteAll(eyedeeone, eyedeetwo, eyedeethr, eyedeefou) {
         permute(eyedeeone);
         permute(eyedeetwo);
+        permute(eyedeethr);
+        permute(eyedeefou);
     }
 
     function permute(eyedee) {
