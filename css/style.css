@@ -1,8 +1,3 @@
-/*
-Template Name: Bodo - Simple One Page Personal
-Author: BdgPixel
-Author URI:  http://themeforest.net/user/BdgPixel
-*/
 /* -----------------------------------------------------------
 TABLE OF CONTENTS:
 --------------------------------------------------------------
@@ -1135,7 +1130,7 @@ ul.portfolio-image li .desc{
   float: left;
   overflow: hidden;
   width: 33.33333%;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .socials a {
@@ -1182,24 +1177,23 @@ ul.portfolio-image li .desc{
   transform: translateY(100%);
 }
 
-.facebook{
-  background: #969696;
-  /*padding: 20px 0;*/
-}
-.facebook a:after{
-  background-color: #527bbb;
-}
 .twitter{
   background: #ABABAB;
 }
 .twitter a:after{
   background-color: #77ccf1;
 }
-.gplus{
-  background: #d8d8d8;
+.github{
+  background: #ABABAB;
 }
-.gplus a:after{
-  background: #dd4b39;
+.github a:after{
+  background: #4078c0;
+}
+.youtube{
+  background: #ABABAB;
+}
+.youtube a:after{
+  background: #b31217;
 }
 
 .footer-bottom{
