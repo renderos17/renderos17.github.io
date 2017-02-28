@@ -1,0 +1,10 @@
+body {
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    background: url("assets/indexBackground.jpg");
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-shadow: 3px 2px rgba(0,0,0,0.15);
+}
