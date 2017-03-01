@@ -11,11 +11,10 @@ TABLE OF CONTENTS:
  7.a) portfolio
  7.b) service
  7.c) experience
- 7.d) testimonial
- 7.e) blog
- 7.f) about
- 7.g) contact
- 7.h) footer
+ 7.d) blog
+ 7.e) about
+ 7.f) contact
+ 7.g) footer
 8) Components
  8.a) skills
 
@@ -51,10 +50,10 @@ html {
   width: 100%;
 }
 body {
-  color: #2f2f2f;
+  color: #FFFFFF;
   font-size: 16px;
   line-height: 1.7;
-  background-color: #fff;
+  background: linear-gradient(to bottom, #000000 0%, #1A1A20 100%);
 }
 a {
   color: #2f2f2f;
@@ -71,7 +70,7 @@ a:hover {
 }
 a:focus {
   outline: none;
-  color: #999999;
+  color: #010101;
   text-decoration: none;
 }
 iframe {
@@ -117,7 +116,7 @@ img { max-width: 100%; }
 .mar-tm-10{ margin-top: -10px;}
 
 .white-col{
-  background: #ffffff;
+  background: linear-gradient(to bottom, #000000 0%, #1A1A20 100%);
   padding: none;
 }
 
@@ -145,12 +144,12 @@ img { max-width: 100%; }
 }
 /*----- background ------*/
 .grey-bg {
-  background: #f6f6f6;
+  background: #1A1A20;
   padding: 120px 0;
   display: block;
 }
 .white-bg {
-  background: #ffffff;
+  background: #1A1A20;
   padding: 120px 0;
   display: block;
 }
@@ -173,7 +172,7 @@ img { max-width: 100%; }
 }
 .text-detail {
   margin-top: 30px;
-  color: #5f5f5f;
+  color: #FAFAFF;
 }
 
 .listing-item{
@@ -199,10 +198,10 @@ img { max-width: 100%; }
   z-index: 1;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 2px solid #a0a0a0;
   display: block;
   padding: 0px 15px 5px 15px;
-  background: #ffffff;
+  background: #000000;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -268,9 +267,9 @@ img { max-width: 100%; }
 .menu-button span {
   display: block;
   position: absolute;
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background: #2f2f2f;
+  background: #ffffff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -496,7 +495,7 @@ p {
   font-size: 12px;
   line-height: 14px;
   border: 1px solid #ececec;
-  color: #777777;
+  color: #B4B4BF;
   padding:8px 10px;
   border-radius: 6px;
   display: inline-block;
@@ -648,7 +647,7 @@ ul.portfolio-image li .decription-wrap {
 }
 ul.portfolio-image li .image-bg {
   color: #2f2f2f;
-  background: #ffffff;
+  background: #000000;
   background: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   text-transform: uppercase;
@@ -720,7 +719,7 @@ ul.portfolio-image li .desc{
   content: " ";
   width: 100%;
   height: 3px;
-  background: #818181;
+  background: #a6a6a6;
   -webkit-transform: scaleX(0);
   transition: all 0.2s ease;
 }
@@ -735,7 +734,7 @@ ul.portfolio-image li .desc{
   -webkit-transform-origin: 100% 0;
 }
 .wrap-card:hover {
-  box-shadow: 20px 20px 0px #818181;
+  box-shadow: 20px 20px 0px #0d0d10;
   -webkit-transform: translateY(-10px) translateX(-10px);
   transition: all 0.2s ease 0.4s;
 }
@@ -744,7 +743,7 @@ ul.portfolio-image li .desc{
   -webkit-transform: scaleX(1);
 }
 .card {
-  background: #ffffff;
+  background: #49494c;
   padding: 30px 35px 45px 35px;
   margin-bottom: 30px;
   border: 1px solid rgba(129, 129, 129, 0.1);
@@ -774,53 +773,7 @@ ul.portfolio-image li .desc{
 .card:hover:before {
   -webkit-transform: scaleY(1);
 }
-/*---------- d. testimonial -----------*/
-#testimonial {
-  background-image: url(../images/testimonial-bg.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 550px;
-}
-.list-testimonial {
-  display: block;
-  width: 100%;
-}
-.list-testimonial .content-testimonial {
-  text-align: center;
-  color: #ffffff;
-}
-.list-testimonial .content-testimonial .testi {
-  font-size: 16px;
-  line-height: 46px;
-  letter-spacing: 2px;
-}
-.list-testimonial .content-testimonial .people {
-  font-size: 14px;
-  margin-top: 30px;
-  letter-spacing: 2px;
-  color: #B7B7B7;
-  font-weight: 700;
-}
-.mask-testimonial{
-  background-color: rgba(47, 47, 47, 0.7);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.wrap-testimonial{
-  z-index: 1;
-  position: relative;
-}
-/*-------------- e. blog -------------*/
+/*-------------- d. blog -------------*/
 .grid {margin-top: 60px;}
 .grid:after {
   content: '';
@@ -907,7 +860,7 @@ ul.portfolio-image li .desc{
   text-align: justify;
   color: #5f5f5f;
 }
-/*---------- f. quote -----------*/
+/*---------- e. quote -----------*/
 #about{
   min-height: 650px;
   display: inline-block;
@@ -971,7 +924,7 @@ ul.portfolio-image li .desc{
   font-size: 18px;
   text-align: center;
 }
-/*---------- g. contact -----------*/
+/*---------- f. contact -----------*/
 #contact {padding: 120px 0 200px 0;}
 #contact form {
   margin-top: 25px;
@@ -1111,7 +1064,7 @@ ul.portfolio-image li .desc{
     background: transparent;
   }
 }
-/*-------------- h. footer ------------------*/
+/*-------------- g. footer ------------------*/
 .footer-top{
   width: 100%;
   text-align: center;
