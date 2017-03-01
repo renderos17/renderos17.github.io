@@ -485,11 +485,18 @@ p {
   text-transform: uppercase;
   color: #cccccc;
 }
+.major {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  color: #444444;
+}
 .company {
   font-size: 12px;
   line-height: 14px;
   border: 1px solid #ececec;
-  color: #cccccc;
+  color: #777777;
   padding:8px 10px;
   border-radius: 6px;
   display: inline-block;
