@@ -90,7 +90,7 @@
 
     //typed js
     $(".typed").typed({
-        strings: ["My Name is M.Reza", "I'm a Web Designer", "Love Simplicity"],
+        strings: ["My name is Alexis Renderos.", "Welcome to Zombo.com.", "This ... is ... ZomboCom. Welcome. This is ZomboCom; welcome ... to ZomboCom. You can do anything at ZomboCom. Anything at all. The only limit is yourself. Welcome ... to ZomboCom."],
         typeSpeed: 100,
         backDelay: 900,
         // loop
