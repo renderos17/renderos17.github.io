@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  background: #000;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#back{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#front{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#food{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#fire{
+  top: -75;
+}

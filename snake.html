@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Final Project - Snake Game</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>var globalFire = 0;</script>
+<script src="js/Snake.js"></script>
+<link rel="stylesheet" type="text/css" href="css/Snake.css"/>
+<style>
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div style="position: relative;">
+<canvas id="back" style="z-index: 0;"></canvas>
+
+<canvas id="front" style="z-index: 50; background-color: transparent;"></canvas>
+<canvas id="food" style="z-index: 100; background-color: transparent;"></canvas>
+</div>
+
+</div>
+
+</body>
+</html>
