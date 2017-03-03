@@ -619,12 +619,12 @@ ul.portfolio-image li:hover {
   cursor: pointer;
 }
 ul.portfolio-image li:hover img {
-  -webkit-filter: grayscale(20%);
-  transform: scale(1.15);
+  -webkit-filter: grayscale(0%);
+  transform: scale(1.20);
 }
-ul.portfolio-image li:hover .image-bg {opacity: 1;}
+ul.portfolio-image li:hover .image-bg {opacity: 0.7;}
 ul.portfolio-image li:hover .description-wrap {
-  background: rgba(186, 186, 186, 0.6);
+  background: rgba(150, 150, 150, 0.1);
 }
 ul.portfolio-image li img {
   position: absolute;
@@ -948,7 +948,7 @@ ul.portfolio-image li .desc{
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #2b2b2b;
+  border-bottom: 1px solid #F0F0FF;
   background: transparent;
   color: #969696;
   font-size: 13px;
@@ -959,7 +959,7 @@ ul.portfolio-image li .desc{
   border-bottom: none;
 }
 #contact label {
-  color: #2b2b2b;
+  color: #F0F0FF;
   font-size: 14px;
   font-weight: normal;
   position: absolute;
@@ -1023,8 +1023,8 @@ ul.portfolio-image li .desc{
   animation: inputHighlighter 0.3s ease;
 }
 #contact input[type=submit] {
-  border: 1px solid #2b2b2b !important;
-  color: #2b2b2b;
+  border: 1px solid #f0f0ff !important;
+  color: #F0F0FF;
   padding: 10px;
   font-weight: 700;
   letter-spacing: 0.9px;
@@ -1137,20 +1137,20 @@ ul.portfolio-image li .desc{
   transform: translateY(100%);
 }
 
-.twitter{
-  background: #ABABAB;
+.linkedin{
+  background: #707070;
 }
-.twitter a:after{
-  background-color: #77ccf1;
+.linkedin a:after{
+  background-color: #0077B5;
 }
 .github{
-  background: #ABABAB;
+  background: #808080;
 }
 .github a:after{
   background: #4078c0;
 }
 .youtube{
-  background: #ABABAB;
+  background: #909090;
 }
 .youtube a:after{
   background: #b31217;
