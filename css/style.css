@@ -56,7 +56,7 @@ body {
   background: linear-gradient(to bottom, #000000 0%, #1A1A20 100%);
 }
 a {
-  color: #2f2f2f;
+  color: #4f4f4f;
   text-decoration: none;
   transition: ease .6s;
   -webkit-transition: ease .6s;
@@ -66,7 +66,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #818181;
+  color: #D1D1D1;
 }
 a:focus {
   outline: none;
@@ -172,7 +172,7 @@ img { max-width: 100%; }
 }
 .text-detail {
   margin-top: 30px;
-  color: #FAFAFF;
+  color: #FFFFFF;
 }
 
 .listing-item{
