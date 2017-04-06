@@ -22,14 +22,7 @@ var createScene = function () {
 	// Change the scene background color to green.
 	scene.clearColor = new BABYLON.Color3(0, 1, 0);
 
-	// This creates and positions a free camera
-	var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 5, -10), scene);
-
-	// This targets the camera to scene origin
-	camera.setTarget(BABYLON.Vector3.Zero());
-
-	// This attaches the camera to the canvas
-	camera.attachControl(canvas, false);
+	var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1, 0.8, 10, new BABYLON.Vector3(0, 0, 0), scene);
 
 	// This creates a light, aiming 0,1,0 - to the sky.
 	var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
@@ -58,6 +51,12 @@ var createScene = function () {
 	var groundText1 = new BABYLON.StandardMaterial("texture2", scene);
     groundText1.diffuseTexture = new BABYLON.Texture("textures/space.jpg", scene);
 
+    // This targets the camera to the sphere
+	camera.setTarget(sphere);
+
+	// This attaches the camera to the canvas
+	camera.attachControl(canvas, false);
+
 	// Leave this function
 	return scene;
 };
@@ -71,6 +70,7 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
+	sphere.position.y += 0.1;
 	scene.render();
 });
 }
