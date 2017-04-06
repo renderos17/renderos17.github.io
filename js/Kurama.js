@@ -47,9 +47,15 @@ var createScene = function () {
 	sphere.position.y = 2;
 
 	// Let's try our built-in 'ground' shape.  Params: name, width, depth, subdivisions, scene
-	var ground = BABYLON.Mesh.CreateGround("ground1", 100, 100, 100, scene);
-	var groundText1 = new BABYLON.StandardMaterial("texture2", scene);
-    groundText1.diffuseTexture = new BABYLON.Texture("textures/space.jpg", scene);
+	// var ground = BABYLON.Mesh.CreateGround("ground1", 100, 100, 100, scene);
+	// var groundText1 = new BABYLON.StandardMaterial("texture2", scene);
+    // groundText1.diffuseTexture = new BABYLON.Texture("textures/space.jpg", scene);
+
+    var materialPlane = new BABYLON.StandardMaterial("texturePlane", scene);
+    materialPlane.diffuseTexture = new BABYLON.Texture("textures/space.jpg", scene);
+    materialPlane.diffuseTexture.uScale = 5.0;//Repeat 5 times on the Vertical Axes
+    materialPlane.diffuseTexture.vScale = 5.0;//Repeat 5 times on the Horizontal Axes
+    materialPlane.backFaceCulling = false;
 
     // This targets the camera to the sphere
 	camera.setTarget(sphere);
