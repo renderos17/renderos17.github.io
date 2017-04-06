@@ -70,7 +70,8 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
-	sphere.position.y += 0.1;
+	sphere.position.y += 1;
+	console.log(sphere.position.y);
 	scene.render();
 });
 }
