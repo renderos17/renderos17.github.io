@@ -38,25 +38,25 @@ var createScene = function () {
     plane1.position.y = 0;
     plane1.rotation.x = Math.PI / 2;
         
-    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene); // Good!
-    plane2.position.x = 0;
+    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene);
+    plane2.position.x = 50;
     plane2.position.y = 50;
     plane2.position.z = -50;
     plane2.rotation.y = Math.PI / 2;
     
-    var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
+    var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene); // Good!
     plane3.position.x = 50;
     plane3.position.y = 50;
-    plane3.position.z = -10;
+    plane3.position.z = 0;
     plane3.rotation.y = Math.PI / 2;
 
-    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene); // Good!
-    plane4.position.x = 50;
+    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene);
+    plane4.position.x = -50;
     plane4.position.y = 50;
-    plane4.position.z = 0;
+    plane4.position.z = 50;
     plane4.rotation.y = Math.PI / 2;
 
-    var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
+    var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene); // Good!
     plane5.position.x = -50;
     plane5.position.y = 50;
     plane5.position.z = 10;
@@ -79,10 +79,10 @@ var createScene = function () {
     testingPlane.backFaceCulling = false;
 
     plane1.material = materialPlane;
-    plane2.material = materialPlane;
-    plane3.material = testingPlane;
-    plane4.material = materialPlane;
-    plane5.material = testingPlane;
+    plane2.material = testingPlane;
+    plane3.material = materialPlane;
+    plane4.material = testingPlane;
+    plane5.material = materialPlane;
     plane6.material = materialPlane;
 
 	camera.attachControl(canvas, false); // req
