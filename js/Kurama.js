@@ -26,6 +26,14 @@ var createScene = function () {
 	sphere.material = materialSphere1;
 	sphere.position.y = 2;
 
+	// Placement rules for planes:
+	//
+	// You shall not use a negative Y value.
+	// ...
+	// ...
+	// ...
+	// That is all.
+
     var plane1 = BABYLON.Mesh.CreatePlane("planeBot", 100, scene); // Good!
     plane1.position.y = 0;
     plane1.rotation.x = Math.PI / 2;
@@ -42,9 +50,9 @@ var createScene = function () {
     plane3.rotation.y = Math.PI / 2;
 
     var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene); // Good!
-    plane4.position.x = 0;
+    plane4.position.x = 50;
     plane4.position.y = 50;
-    plane4.position.z = 50;
+    plane4.position.z = 0;
     plane4.rotation.y = Math.PI / 2;
 
     var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
@@ -69,10 +77,10 @@ var createScene = function () {
     testingPlane.backFaceCulling = false;
 
     plane1.material = materialPlane;
-    plane2.material = materialPlane;
-    plane3.material = materialPlane;
+    plane2.material = testingPlane;
+    plane3.material = testingPlane;
     plane4.material = testingPlane;
-    plane5.material = materialPlane;
+    plane5.material = testingPlane;
     plane6.material = materialPlane;
 
 	camera.attachControl(canvas, false); // req
