@@ -72,14 +72,20 @@ var createScene = function () {
     materialPlane.diffuseTexture.vScale = 10.0;
     materialPlane.backFaceCulling = false;
 
-    var testingPlane = new BABYLON.StandardMaterial("texturePlane", scene);
+    var testingPlane = new BABYLON.StandardMaterial("texturePlane1", scene);
     testingPlane.diffuseTexture = new BABYLON.Texture("textures/pcb.svg", scene);
     testingPlane.diffuseTexture.uScale = 10.0;
     testingPlane.diffuseTexture.vScale = 10.0;
     testingPlane.backFaceCulling = false;
 
+    var guessPlane = new BABYLON.StandardMaterial("texturePlane2", scene);
+    guessPlane.diffuseTexture = new BABYLON.Texture("textures/deathwing.jpg", scene);
+    guessPlane.diffuseTexture.uScale = 10.0;
+    guessPlane.diffuseTexture.vScale = 10.0;
+    guessPlane.backFaceCulling = false;
+
     plane1.material = materialPlane;
-    plane2.material = testingPlane;
+    plane2.material = guessPlane;
     plane3.material = materialPlane;
     plane4.material = testingPlane;
     plane5.material = materialPlane;
