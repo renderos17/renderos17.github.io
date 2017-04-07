@@ -53,7 +53,13 @@ var createScene = function () {
     materialPlane.diffuseTexture.uScale = 10.0;
     materialPlane.diffuseTexture.vScale = 10.0;
     materialPlane.backFaceCulling = false;
+    
     plane1.material = materialPlane;
+    plane2.material = materialPlane;
+    plane3.material = materialPlane;
+    plane4.material = materialPlane;
+    plane5.material = materialPlane;
+    plane6.material = materialPlane;
 
 	camera.attachControl(canvas, false); // req
 
