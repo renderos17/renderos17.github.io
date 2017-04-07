@@ -29,23 +29,23 @@ var createScene = function () {
     plane1.rotation.x = Math.PI / 2;
         
     var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene);
-    plane2.position.y = 500;
+    plane2.position.y = 50;
     plane2.rotation.y = Math.PI / 2;
     
     var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
-    plane3.position.y = -500;
+    plane3.position.y = -50;
     plane3.rotation.y = 0;
 
     var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene);
-    plane4.position.x = 500;
+    plane4.position.x = 50;
     plane4.rotation.x = Math.PI / 2;
 
     var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
-    plane5.position.x = -500;
+    plane5.position.x = -50;
     plane5.rotation.x = 0;
     
     var plane6 = BABYLON.Mesh.CreatePlane("planeTop", 100, scene);
-    plane6.position.y = -1000;
+    plane6.position.y = -100;
     plane6.rotation.x = Math.PI / 2;
 
     var materialPlane = new BABYLON.StandardMaterial("texturePlane", scene);
@@ -53,13 +53,19 @@ var createScene = function () {
     materialPlane.diffuseTexture.uScale = 10.0;
     materialPlane.diffuseTexture.vScale = 10.0;
     materialPlane.backFaceCulling = false;
-    
+
+    var testingPlane = new BABYLON.StandardMaterial("texturePlane", scene);
+    testingPlane.diffuseTexture = new BABYLON.Texture("textures/pcb.svg", scene);
+    testingPlane.diffuseTexture.uScale = 10.0;
+    testingPlane.diffuseTexture.vScale = 10.0;
+    testingPlane.backFaceCulling = false;
+
     plane1.material = materialPlane;
     plane2.material = materialPlane;
     plane3.material = materialPlane;
     plane4.material = materialPlane;
     plane5.material = materialPlane;
-    plane6.material = materialPlane;
+    plane6.material = testingPlane;
 
 	camera.attachControl(canvas, false); // req
 
