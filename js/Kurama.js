@@ -24,15 +24,36 @@ var createScene = function () {
 	sphere.material = materialSphere1;
 	sphere.position.y = 2;
 
-    var plane = BABYLON.Mesh.CreatePlane("plane", 100, scene);
-    plane.position.y = -5;
-    plane.rotation.x = Math.PI / 2;
+    var plane1 = BABYLON.Mesh.CreatePlane("planeBot", 100, scene);
+    plane1.position.y = 0;
+    plane1.rotation.x = Math.PI / 2;
+        
+    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene);
+    plane2.position.y = 500;
+    plane2.rotation.y = Math.PI / 2;
+    
+    var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
+    plane3.position.y = -500;
+    plane3.rotation.y = 0;
+
+    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene);
+    plane4.position.x = 500;
+    plane4.rotation.x = Math.PI / 2;
+
+    var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
+    plane5.position.x = -500;
+    plane5.rotation.x = 0;
+    
+    var plane6 = BABYLON.Mesh.CreatePlane("planeTop", 100, scene);
+    plane6.position.y = -1000;
+    plane6.rotation.x = Math.PI / 2;
+
     var materialPlane = new BABYLON.StandardMaterial("texturePlane", scene);
     materialPlane.diffuseTexture = new BABYLON.Texture("textures/space1.jpg", scene);
     materialPlane.diffuseTexture.uScale = 10.0;
     materialPlane.diffuseTexture.vScale = 10.0;
     materialPlane.backFaceCulling = false;
-    plane.material = materialPlane;
+    plane1.material = materialPlane;
 
 	camera.attachControl(canvas, false); // req
 
