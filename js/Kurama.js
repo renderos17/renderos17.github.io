@@ -30,19 +30,19 @@ var createScene = function () {
     plane1.position.y = 0;
     plane1.rotation.x = Math.PI / 2;
         
-    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene);
-    plane2.position.x = -50;
-    plane2.position.y = -50;
+    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene); // Good!
+    plane2.position.x = 0;
+    plane2.position.y = 50;
     plane2.position.z = -50;
     plane2.rotation.y = Math.PI / 2;
     
     var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
-    plane3.position.x = 50
+    plane3.position.x = 50;
     plane3.position.y = 50;
-    plane3.rotation.y = 0;
+    plane3.rotation.y = Math.PI / 2;
 
-    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene);
-    plane4.position.x = 50;
+    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene); // Good!
+    plane4.position.x = 0;
     plane4.position.y = 50;
     plane4.position.z = 50;
     plane4.rotation.y = Math.PI / 2;
