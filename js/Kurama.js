@@ -47,6 +47,7 @@ var createScene = function () {
     var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
     plane3.position.x = 50;
     plane3.position.y = 50;
+    plane3.position.z = -10;
     plane3.rotation.y = Math.PI / 2;
 
     var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene); // Good!
@@ -58,6 +59,7 @@ var createScene = function () {
     var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
     plane5.position.x = -50;
     plane5.position.y = 50;
+    plane5.position.z = 10;
     plane5.rotation.y = Math.PI / 2;
     
     var plane6 = BABYLON.Mesh.CreatePlane("planeTop", 100, scene); // Good!
@@ -77,9 +79,9 @@ var createScene = function () {
     testingPlane.backFaceCulling = false;
 
     plane1.material = materialPlane;
-    plane2.material = testingPlane;
+    plane2.material = materialPlane;
     plane3.material = testingPlane;
-    plane4.material = testingPlane;
+    plane4.material = materialPlane;
     plane5.material = testingPlane;
     plane6.material = materialPlane;
 
