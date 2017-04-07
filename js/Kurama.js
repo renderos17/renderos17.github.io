@@ -13,7 +13,9 @@ var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
-	var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1, 0.8, 10, new BABYLON.Vector3(0, 0, 0), scene);
+	var camera = new BABYLON.FreeCamera("sceneCamera", new BABYLON.Vector3(0, 1, -15), scene);
+	camera.inputs.addGamepad();
+	var inputManager = camera.inputs;
 
 	var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
 	light.intensity = .5;
@@ -29,23 +31,23 @@ var createScene = function () {
     plane1.rotation.x = Math.PI / 2;
         
     var plane2 = BABYLON.Mesh.CreatePlane("planeNor", 100, scene);
-    plane2.position.y = 50;
+    plane2.position.y = 100;
     plane2.rotation.y = Math.PI / 2;
     
     var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene);
-    plane3.position.y = -50;
+    plane3.position.y = -100;
     plane3.rotation.y = 0;
 
     var plane4 = BABYLON.Mesh.CreatePlane("planeSou", 100, scene);
-    plane4.position.x = 50;
-    plane4.rotation.x = Math.PI / 2;
+    plane4.position.x = 100;
+    plane4.rotation.y = Math.PI / 2;
 
     var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene);
-    plane5.position.x = -50;
-    plane5.rotation.x = 0;
+    plane5.position.x = -100;
+    plane5.rotation.y = 0;
     
     var plane6 = BABYLON.Mesh.CreatePlane("planeTop", 100, scene);
-    plane6.position.y = -100;
+    plane6.position.y = 100;
     plane6.rotation.x = Math.PI / 2;
 
     var materialPlane = new BABYLON.StandardMaterial("texturePlane", scene);
@@ -64,8 +66,8 @@ var createScene = function () {
     plane2.material = materialPlane;
     plane3.material = materialPlane;
     plane4.material = materialPlane;
-    plane5.material = materialPlane;
-    plane6.material = testingPlane;
+    plane5.material = testingPlane;
+    plane6.material = materialPlane;
 
 	camera.attachControl(canvas, false); // req
 
