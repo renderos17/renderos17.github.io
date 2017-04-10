@@ -96,6 +96,7 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
+	var dir = "n";
 	document.onkeydown = function(e) {
 			var key = e.keyCode;
 
