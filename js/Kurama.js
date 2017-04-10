@@ -43,7 +43,7 @@ var createScene = function () {
     plane2.position.y = 50;
     plane2.position.z = 50;
     plane2.rotation.x = Math.PI / 2;
-    plane2.rotation.y = Math.PI / 2;
+    plane2.rotation.z = Math.PI / 2;
     
     var plane3 = BABYLON.Mesh.CreatePlane("planeEas", 100, scene); // Good!
     plane3.position.x = 50;
@@ -56,12 +56,12 @@ var createScene = function () {
     plane4.position.y = 50;
     plane4.position.z = 0;
     plane4.rotation.x = Math.PI / 2;
-    plane4.rotation.y = Math.PI / 2;
+    plane4.rotation.z = Math.PI / 2;
 
     var plane5 = BABYLON.Mesh.CreatePlane("planeWes", 100, scene); // Good!
     plane5.position.x = -50;
     plane5.position.y = 50;
-    plane5.position.z = 10;
+    plane5.position.z = 0;
     plane5.rotation.y = Math.PI / 2;
     
     var plane6 = BABYLON.Mesh.CreatePlane("planeTop", 100, scene); // Good!
