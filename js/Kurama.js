@@ -17,8 +17,11 @@ var createScene = function () {
 	camera.inputs.addKeyboard();
 	var inputManager = camera.inputs;
 
-	var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
-	light.intensity = .5;
+	var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+	light1.intensity = .5;
+
+	var light2 = new BABYLON.HemisphericLight("light2", new BABYLON.Vector3(0, -1, 0), scene);
+	light2.intensity = .5;
 
 	var sphere = BABYLON.Mesh.CreateSphere("sphere1", 16, 4, scene);
 	var materialSphere1 = new BABYLON.StandardMaterial("texture1", scene);
@@ -26,7 +29,7 @@ var createScene = function () {
 	sphere.material = materialSphere1;
 	sphere.position.y = 2;
 
-	var boxSize = 500;
+	var boxSize = 1000;
 
 	// Placement rules for planes:
 	//
@@ -72,22 +75,10 @@ var createScene = function () {
     materialPlane.diffuseTexture.vScale = 10.0;
     materialPlane.backFaceCulling = false;
 
-    var testingPlane = new BABYLON.StandardMaterial("texturePlane1", scene);
-    testingPlane.diffuseTexture = new BABYLON.Texture("textures/pcb.svg", scene);
-    testingPlane.diffuseTexture.uScale = 10.0;
-    testingPlane.diffuseTexture.vScale = 10.0;
-    testingPlane.backFaceCulling = false;
-
-    var guessPlane = new BABYLON.StandardMaterial("texturePlane2", scene);
-    guessPlane.diffuseTexture = new BABYLON.Texture("textures/deathwing.jpg", scene);
-    guessPlane.diffuseTexture.uScale = 10.0;
-    guessPlane.diffuseTexture.vScale = 10.0;
-    guessPlane.backFaceCulling = false;
-
     plane1.material = materialPlane;
-    plane2.material = guessPlane;
+    plane2.material = materialPlane;
     plane3.material = materialPlane;
-    plane4.material = testingPlane;
+    plane4.material = materialPlane;
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
