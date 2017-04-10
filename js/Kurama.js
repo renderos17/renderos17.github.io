@@ -96,6 +96,26 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
+	document.onkeydown = function(e) {
+			var key = e.keyCode;
+
+			if(key == 65 && dir != "right")     setTimeout(function() {dir = "left"; }, 30);
+			else if(key == 87 && dir != "down") setTimeout(function() {dir = "up"; }, 30);
+			else if(key == 68 && dir != "left") setTimeout(function() {dir = "right"; }, 30);
+			else if(key == 83 && dir != "up")   setTimeout(function() {dir = "down"; }, 30);
+
+			if(key) e.preventDefault();
+	}
+
+	// camera.position.x
+	// camera.position.y
+	// camera.position.z
+
+	if(dir == "right") sphere.positon.x++;
+	else if(dir == "left") sphere.positon.x--;
+	else if(dir == "up") sphere.positon.y--;
+	else if(dir == "down") sphere.positon.y++;
+
 	scene.render();
 });
 }
