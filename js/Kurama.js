@@ -100,10 +100,10 @@ engine.runRenderLoop(function() {
 	document.onkeydown = function(e) {
 			var key = e.keyCode;
 
-			if(key == 65 && dir != "right")     setTimeout(function() {dir = "left"; }, 30);
-			else if(key == 87 && dir != "down") setTimeout(function() {dir = "up"; }, 30);
-			else if(key == 68 && dir != "left") setTimeout(function() {dir = "right"; }, 30);
-			else if(key == 83 && dir != "up")   setTimeout(function() {dir = "down"; }, 30);
+			if(key == 65 && dir != "right") dir = "left";
+			else if(key == 87 && dir != "down") dir = "up";
+			else if(key == 68 && dir != "left") dir = "right";
+			else if(key == 83 && dir != "up") dir = "down";
 
 			if(key) e.preventDefault();
 	}
