@@ -89,7 +89,7 @@ var createScene = function () {
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
-    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnEveryFrameTrigger, function (evt) {
+    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, function (evt) {
 		if (evt.sourceEvent.key == "w") {
 			sphere.position.y += playerSpeed;
 		}
