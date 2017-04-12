@@ -36,6 +36,8 @@ var createScene = function () {
 
 	var boxSize = 1000;
 
+	var playerSpeed = 0.1;
+
 	// Placement rules for planes:
 	//
 	// You shall not use a negative Y value.
@@ -87,18 +89,18 @@ var createScene = function () {
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
-    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
+    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnEveryFrameTrigger, function (evt) {
 		if (evt.sourceEvent.key == "w") {
-			sphere.position.y += 3;
+			sphere.position.y += playerSpeed;
 		}
 		if (evt.sourceEvent.key == "s") {
-			sphere.position.y -= 3;
+			sphere.position.y -= playerSpeed;
 		}
 		if (evt.sourceEvent.key == "a") {
-			sphere.position.x += 3;
+			sphere.position.x += playerSpeed;
 		}
 		if (evt.sourceEvent.key == "d") {
-			sphere.position.x -= 3;
+			sphere.position.x -= playerSpeed;
 		}
 		else {
 			console.log(sphere.position.y);
