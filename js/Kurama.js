@@ -100,22 +100,25 @@ engine.runRenderLoop(function() {
 	document.onkeydown = function(e) {
 			var key = e.keyCode;
 
-			if(key == 65 && dir != "right") dir = "left";
-			else if(key == 87 && dir != "down") dir = "up";
-			else if(key == 68 && dir != "left") dir = "right";
-			else if(key == 83 && dir != "up") dir = "down";
+			console.log(key);
+
+			if(key == 65) dir = "left";
+			else if(key == 87) dir = "up";
+			else if(key == 68) dir = "right";
+			else if(key == 83) dir = "down";
 
 			if(key) e.preventDefault();
+
 	}
 
 	// camera.position.x
 	// camera.position.y
 	// camera.position.z
 
-	if(dir == "right") sphere.positon.x++;
-	else if(dir == "left") sphere.positon.x--;
-	else if(dir == "up") sphere.positon.y--;
-	else if(dir == "down") sphere.positon.y++;
+	if(dir == "right") sphere.positon.x += 3;
+	else if(dir == "left") sphere.positon.x -= 3;
+	else if(dir == "up") sphere.positon.y -= 3;
+	else if(dir == "down") sphere.positon.y += 3;
 
 	scene.render();
 });
