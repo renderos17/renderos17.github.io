@@ -11,6 +11,10 @@ function initScene() {
 
 var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
+	var gravityVector = new BABYLON.Vector3(0,-9.81, 0);
+	var physicsPlugin = new BABYLON.CannonJSPlugin();
+	scene.enablePhysics(gravityVector, physicsPlugin);
+
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
 	var camera = new BABYLON.FreeCamera("sceneCamera", new BABYLON.Vector3(0, 1, -15), scene);
@@ -113,11 +117,13 @@ engine.runRenderLoop(function() {
 	// camera.position.y
 	// camera.position.z
 
+	/*
 	if(dir == "right") sphere.positon.x += 3;
 	else if(dir == "left") sphere.positon.x -= 3;
 	else if(dir == "up") sphere.positon.y -= 3;
 	else if(dir == "down") sphere.positon.y += 3;
-
+	*/
+	
 	console.log(sphere.positon.x);
 
 	scene.render();
