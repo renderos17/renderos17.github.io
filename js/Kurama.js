@@ -89,16 +89,16 @@ var createScene = function () {
 
     scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
 		if (evt.sourceEvent.key == "w") {
-			sphere.positon.y -= 3;
+			sphere.positon.y += 3;
 		}
-		else if (evt.sourceEvent.key == "s") {
-			sphere.position.y += 3;
+		if (evt.sourceEvent.key == "s") {
+			sphere.position.y -= 3;
 		}
-		else if (evt.sourceEvent.key == "a") {
-			sphere.positon.x -= 3;
-		}
-		else if (evt.sourceEvent.key == "d") {
+		if (evt.sourceEvent.key == "a") {
 			sphere.positon.x += 3;
+		}
+		if (evt.sourceEvent.key == "d") {
+			sphere.positon.x -= 3;
 		}
 		else {
 			console.log(sphere.position.y);
