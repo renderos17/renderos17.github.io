@@ -14,6 +14,25 @@ var createScene = function () {
 	var gravityVector = new BABYLON.Vector3(0,-9.81, 0);
 	var physicsPlugin = new BABYLON.CannonJSPlugin();
 	scene.enablePhysics(gravityVector, physicsPlugin);
+	scene.actionManager = new BABYLON.ActionManager(scene);
+
+	scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
+		if (evt.sourceEvent.key == "w") {
+			sphere.positon.y -= 3;
+		}
+		else if (evt.sourceEvent.key == "s") {
+			sphere.position.y += 3;
+		}
+		else if (evt.sourceEvent.key == "a") {
+			sphere.positon.x -= 3;
+		}
+		else if (evt.sourceEvent.key == "d") {
+			sphere.positon.x += 3;
+		}
+		else {}
+
+		console.log(sphere.position.x);
+	}));
 
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
@@ -100,32 +119,6 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
-	var dir = "n";
-	document.onkeydown = function(e) {
-			var key = e.keyCode;
-
-			if(key == 65) dir = "left";
-			else if(key == 87) dir = "up";
-			else if(key == 68) dir = "right";
-			else if(key == 83) dir = "down";
-
-			if(key) e.preventDefault();
-
-	}
-
-	// camera.position.x
-	// camera.position.y
-	// camera.position.z
-
-	/*
-	if(dir == "right") sphere.positon.x += 3;
-	else if(dir == "left") sphere.positon.x -= 3;
-	else if(dir == "up") sphere.positon.y -= 3;
-	else if(dir == "down") sphere.positon.y += 3;
-	*/
-
-	//console.log(sphere.positon.x);
-
 	scene.render();
 });
 }
