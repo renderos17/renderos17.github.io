@@ -16,24 +16,6 @@ var createScene = function () {
 	scene.enablePhysics(gravityVector, physicsPlugin);
 	scene.actionManager = new BABYLON.ActionManager(scene);
 
-	scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
-		if (evt.sourceEvent.key == "w") {
-			sphere.positon.y -= 3;
-		}
-		else if (evt.sourceEvent.key == "s") {
-			sphere.position.y += 3;
-		}
-		else if (evt.sourceEvent.key == "a") {
-			sphere.positon.x -= 3;
-		}
-		else if (evt.sourceEvent.key == "d") {
-			sphere.positon.x += 3;
-		}
-		else {}
-
-		console.log(sphere.position.x);
-	}));
-
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
 	var camera = new BABYLON.FreeCamera("sceneCamera", new BABYLON.Vector3(0, 1, -15), scene);
@@ -104,6 +86,26 @@ var createScene = function () {
     plane4.material = materialPlane;
     plane5.material = materialPlane;
     plane6.material = materialPlane;
+
+    scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, function (evt) {
+		if (evt.sourceEvent.key == "w") {
+			sphere.positon.y -= 3;
+		}
+		else if (evt.sourceEvent.key == "s") {
+			sphere.position.y += 3;
+		}
+		else if (evt.sourceEvent.key == "a") {
+			sphere.positon.x -= 3;
+		}
+		else if (evt.sourceEvent.key == "d") {
+			sphere.positon.x += 3;
+		}
+		else {
+			console.log(sphere.position.y);
+		}
+
+		console.log(sphere.position.x);
+	}));
 
 	camera.attachControl(canvas, false); // req
 
