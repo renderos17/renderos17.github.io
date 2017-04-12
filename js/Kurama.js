@@ -123,8 +123,8 @@ engine.runRenderLoop(function() {
 	else if(dir == "up") sphere.positon.y -= 3;
 	else if(dir == "down") sphere.positon.y += 3;
 	*/
-	
-	console.log(sphere.positon.x);
+
+	//console.log(sphere.positon.x);
 
 	scene.render();
 });
