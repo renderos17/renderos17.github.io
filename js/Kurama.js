@@ -134,6 +134,10 @@ var scene = createScene();
 
 //BABYLON.SceneLoader.Load("", "ship.stl", engine, function (scene) {});
 
+// I'm testing the new laptop; so far, it's gorgeous.
+
+// It's kinda being a fingerprint magnet though.
+
 window.addEventListener("resize", function () {
 	engine.resize();
 });
