@@ -9,6 +9,11 @@ function initScene() {
 	var canvas = document.getElementById("renderCanvas");
 	var engine = new BABYLON.Engine(canvas, true);
 
+	var theHud = document.getElementById('theHUD'),
+      sP = theHud.getContext('2d')
+	theHud.style.width = '100%';
+	theHud.style.height= '100%';
+
 var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
 	var gravityVector = new BABYLON.Vector3(0,-9.81, 0);
@@ -16,9 +21,20 @@ var createScene = function () {
 	scene.enablePhysics(gravityVector, physicsPlugin);
 	scene.actionManager = new BABYLON.ActionManager(scene);
 
+	// DPT
+	// CPT
+
+	// This is the best song ever made in the world
+	// This is the best song ever made in the world
+	// This is the best song ever made in the world
+	// WELL
+	// KING RATS GOT ME ON HIS LIST AGAIN
+
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
 	var camera = new BABYLON.FreeCamera("sceneCamera", new BABYLON.Vector3(0, 1, -15), scene);
+	camera.inputs.clear();
+	camera.inputs.addMouse();
 	camera.inputs.addKeyboard();
 	var inputManager = camera.inputs;
 
@@ -50,7 +66,7 @@ var createScene = function () {
     plane1.position.y = 0;
     plane1.rotation.x = Math.PI / 2;
         
-    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", boxSize, scene);
+    var plane2 = BABYLON.Mesh.CreatePlane("planeNor", boxSize, scene); // Good!
     plane2.position.x = 0;
     plane2.position.y = boxSize / 2.0;
     plane2.position.z = boxSize / 2.0;
@@ -61,7 +77,7 @@ var createScene = function () {
     plane3.position.z = 0;
     plane3.rotation.y = Math.PI / 2;
 
-    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", boxSize, scene);
+    var plane4 = BABYLON.Mesh.CreatePlane("planeSou", boxSize, scene); // Good!
     plane4.position.x = 0;
     plane4.position.y = boxSize / 2.0;
     plane4.position.z = -(boxSize / 2.0);
