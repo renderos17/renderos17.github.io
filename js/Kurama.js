@@ -21,15 +21,6 @@ var createScene = function () {
 	scene.enablePhysics(gravityVector, physicsPlugin);
 	scene.actionManager = new BABYLON.ActionManager(scene);
 
-	// DPT
-	// CPT
-
-	// This is the best song ever made in the world
-	// This is the best song ever made in the world
-	// This is the best song ever made in the world
-	// WELL
-	// KING RATS GOT ME ON HIS LIST AGAIN
-
 	scene.clearColor = new BABYLON.Color3(0, 1, 0); // Bright green.
 
 	var camera = new BABYLON.FreeCamera("sceneCamera", new BABYLON.Vector3(0, 1, -15), scene);
@@ -133,10 +124,6 @@ var createScene = function () {
 var scene = createScene();
 
 //BABYLON.SceneLoader.Load("", "ship.stl", engine, function (scene) {});
-
-// I'm testing the new laptop; so far, it's gorgeous.
-
-// It's kinda being a fingerprint magnet though.
 
 window.addEventListener("resize", function () {
 	engine.resize();
