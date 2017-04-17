@@ -14,6 +14,8 @@ function initScene() {
 	theHud.style.width = '100%';
 	theHud.style.height= '100%';
 
+	var audio = new Audio('Background.mp3');
+
 var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
 	var gravityVector = new BABYLON.Vector3(0,-9.81, 0);
