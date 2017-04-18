@@ -4,17 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 }, false);
 
+var audio = new Audio('Background.mp3');
+
+var totalPlayerDamageDealt = 0;
+var playerKills = 0;
+
 function initScene() {
 
 	var canvas = document.getElementById("renderCanvas");
 	var engine = new BABYLON.Engine(canvas, true);
 
 	var theHud = document.getElementById('theHUD'),
-      sP = theHud.getContext('2d')
+      tH = theHud.getContext('2d')
 	theHud.style.width = '100%';
 	theHud.style.height= '100%';
-
-	var audio = new Audio('Background.mp3');
 
 var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
@@ -41,7 +44,7 @@ var createScene = function () {
 	var materialSphere1 = new BABYLON.StandardMaterial("texture1", scene);
 	materialSphere1.diffuseTexture = new BABYLON.Texture("textures/pcb.svg", scene);
 	sphere.material = materialSphere1;
-	sphere.position.y = 2;
+	sphere.position.y = 3;
 
 	var boxSize = 1000;
 
@@ -132,6 +135,8 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
+	tH.fillText(String(playerKills), 0, 0);
+	playerKills++;
 	scene.render();
 });
 }
