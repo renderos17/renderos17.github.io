@@ -116,10 +116,7 @@ var createScene = function () {
 			sphere.position.x -= playerSpeed;
 		}
 		else {
-			console.log(sphere.position.y);
 		}
-
-		console.log(sphere.position.x);
 	}));
 
 	camera.attachControl(canvas, false); // req
