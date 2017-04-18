@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 var backgroundMusic = new Audio('Background.mp3');
 
 var totalPlayerDamageDealt = 0;
-var playerKills = 0;
+var playerKills = 100;
 
 function initScene() {
 
@@ -133,11 +133,11 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
-	tH.font = "30px Courier New";
+	tH.font = "8px Courier New";
     tH.fillStyle = "White";
-    tH.textAlign = "center";
+    tH.textAlign = "left";
+    tH.clearRect(0,0, theHud.width, theHud.height);
 	tH.fillText(String(playerKills), 0, 0);
-	playerKills++;
 	scene.render();
 });
 }
