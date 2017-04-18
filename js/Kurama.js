@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (BABYLON.Engine.isSupported()) {
+    	backgroundMusic.play();
         initScene();
     }
 }, false);
 
-var audio = new Audio('Background.mp3');
+var backgroundMusic = new Audio('Background.mp3');
 
 var totalPlayerDamageDealt = 0;
 var playerKills = 0;
@@ -135,6 +136,9 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
+	tH.font = "30px Courier New";
+    tH.fillStyle = "White";
+    tH.textAlign = "center";
 	tH.fillText(String(playerKills), 0, 0);
 	playerKills++;
 	scene.render();
