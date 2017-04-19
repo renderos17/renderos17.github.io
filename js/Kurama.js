@@ -133,11 +133,11 @@ window.addEventListener("resize", function () {
 });
 
 engine.runRenderLoop(function() {
-	tH.font = "8px Courier New";
-    tH.fillStyle = "White";
-    tH.textAlign = "left";
-    tH.clearRect(0,0, theHud.width, theHud.height);
-	tH.fillText(String(playerKills), 0, 0);
+	// tH.font = "8px Courier New";
+    // tH.fillStyle = "White";
+    // tH.textAlign = "left";
+    // tH.clearRect(0,0, theHud.width, theHud.height);
+	// tH.fillText(String(playerKills), 0, 0);
 	scene.render();
 });
 }
