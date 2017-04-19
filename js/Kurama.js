@@ -15,10 +15,10 @@ function initScene() {
 	var canvas = document.getElementById("renderCanvas");
 	var engine = new BABYLON.Engine(canvas, true);
 
-	var theHud = document.getElementById('theHUD'),
-      tH = theHud.getContext('2d')
-	theHud.style.width = '100%';
-	theHud.style.height= '100%';
+	//var theHud = document.getElementById('theHUD'),
+      //tH = theHud.getContext('2d')
+	//theHud.style.width = '100%';
+	//theHud.style.height= '100%';
 
 var createScene = function () {
 	var scene = new BABYLON.Scene(engine);
