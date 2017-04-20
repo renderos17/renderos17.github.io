@@ -34,6 +34,7 @@ var createScene = function () {
 	camera.inputs.addMouse();
 	camera.inputs.addKeyboard();
 	var inputManager = camera.inputs;
+	// scene.activeCamera.attachControl(canvas);
 
 	var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
 	light1.intensity = .5;
@@ -46,6 +47,8 @@ var createScene = function () {
 	materialSphere1.diffuseTexture = new BABYLON.Texture("textures/pcb.svg", scene);
 	sphere.material = materialSphere1;
 	sphere.position.y = 3;
+
+	camera.target = sphere;
 
 	var boxSize = 1000;
 
@@ -102,6 +105,36 @@ var createScene = function () {
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
+	var keys={letft:0,right:0,backwards:0,forward:0};
+	window.addEventListener('keydown',function(event){
+		var ch = String.fromCharCode(event.keyCode);
+			if (ch == "A") keys.left=1;
+			if (ch == "D") keys.right=1;
+			if (ch == "S") keys.backwards=1;
+			if (ch == "W") keys.forward=1;
+		}); 
+	window.addEventListener('keyup',function(event){    
+		var ch = String.fromCharCode(event.keyCode);    
+			if (ch == "A") keys.left=0;
+			if (ch == "D") keys.right=0;
+			if (ch == "S") keys.backwards=0;
+			if (ch == "W") keys.forward=0;
+		}); 
+	scene.registerBeforeRender(function(){   
+		if (keys.forward==1){	
+		var posX = Math.sin(sphere.rotation.y);	
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.x += posX;	
+		sphere.position.z += posZ;
+	}	   
+		if (keys.backwards==1){	
+		var posX = Math.sin(sphere.rotation.y);	
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.x -= posX;	
+		sphere.position.z -= posZ;			    
+	}});
+
+/*
     scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, function (evt) {
 		if (evt.sourceEvent.key == "w") {
 			sphere.position.y += playerSpeed;
@@ -118,7 +151,7 @@ var createScene = function () {
 		else {
 		}
 	}));
-
+*/
 	camera.attachControl(canvas, false); // req
 
 	return scene;
