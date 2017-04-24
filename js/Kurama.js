@@ -138,13 +138,13 @@ var createScene = function () {
 		var posY = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
 		sphere.position.y += posY;
-		sphere.position.z += posZ;
+		sphere.position.x += posZ;
 	}
 		if (keys.right==1){
 		var posY = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
 		sphere.position.y -= posY;
-		sphere.position.z -= posZ;
+		sphere.position.x -= posZ;
 	}
 });
 
