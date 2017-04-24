@@ -33,6 +33,7 @@ var createScene = function () {
 	camera.inputs.clear();
 	camera.inputs.addMouse();
 	camera.inputs.addKeyboard();
+
 	var inputManager = camera.inputs;
 	// scene.activeCamera.attachControl(canvas);
 
@@ -113,26 +114,39 @@ var createScene = function () {
 			if (ch == "S") keys.backwards=1;
 			if (ch == "W") keys.forward=1;
 		}); 
-	window.addEventListener('keyup',function(event){    
-		var ch = String.fromCharCode(event.keyCode);    
+	window.addEventListener('keyup',function(event){
+		var ch = String.fromCharCode(event.keyCode);
 			if (ch == "A") keys.left=0;
 			if (ch == "D") keys.right=0;
 			if (ch == "S") keys.backwards=0;
 			if (ch == "W") keys.forward=0;
 		}); 
-	scene.registerBeforeRender(function(){   
-		if (keys.forward==1){	
-		var posX = Math.sin(sphere.rotation.y);	
+	scene.registerBeforeRender(function(){
+		if (keys.forward==1){
+		var posX = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
-		sphere.position.x += posX;	
+		sphere.position.x += posX;
 		sphere.position.z += posZ;
-	}	   
-		if (keys.backwards==1){	
-		var posX = Math.sin(sphere.rotation.y);	
+	}
+		if (keys.backwards==1){
+		var posX = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
-		sphere.position.x -= posX;	
-		sphere.position.z -= posZ;			    
-	}});
+		sphere.position.x -= posX;
+		sphere.position.z -= posZ;
+	}
+		if (keys.left==1){
+		var posY = Math.sin(sphere.rotation.y);
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.y += posY;
+		sphere.position.z += posZ;
+	}
+		if (keys.right==1){
+		var posY = Math.sin(sphere.rotation.y);
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.y -= posY;
+		sphere.position.z -= posZ;
+	}
+});
 
 /*
     scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger, function (evt) {
