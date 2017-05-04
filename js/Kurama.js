@@ -21,6 +21,7 @@ function initScene() {
 	//theHud.style.height= '100%';
 
 var createScene = function () {
+
 	var scene = new BABYLON.Scene(engine);
 	var gravityVector = new BABYLON.Vector3(0,-9.81, 0);
 	var physicsPlugin = new BABYLON.CannonJSPlugin();
@@ -106,13 +107,14 @@ var createScene = function () {
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
-	var keys={letft:0,right:0,backwards:0,forward:0};
+	var keys={letft:0,right:0,backwards:0,forward:0,up:0};
 	window.addEventListener('keydown',function(event){
 		var ch = String.fromCharCode(event.keyCode);
 			if (ch == "A") keys.left=1;
 			if (ch == "D") keys.right=1;
 			if (ch == "S") keys.backwards=1;
 			if (ch == "W") keys.forward=1;
+			if (ch == "E") keys.up=1;
 		}); 
 	window.addEventListener('keyup',function(event){
 		var ch = String.fromCharCode(event.keyCode);
@@ -120,6 +122,7 @@ var createScene = function () {
 			if (ch == "D") keys.right=0;
 			if (ch == "S") keys.backwards=0;
 			if (ch == "W") keys.forward=0;
+			if (ch == "E") keys.up=0;
 		}); 
 	scene.registerBeforeRender(function(){
 		if (keys.forward==1){
@@ -134,18 +137,25 @@ var createScene = function () {
 		sphere.position.x -= posX;
 		sphere.position.z -= posZ;
 	}
-		if (keys.left==1){
+		if (keys.right==1){
 		var posY = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
 		sphere.position.y += posY;
 		sphere.position.x += posZ;
 	}
-		if (keys.right==1){
+		if (keys.left==1){
 		var posY = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
 		sphere.position.y -= posY;
 		sphere.position.x -= posZ;
 	}
+		if (keys.up==1){
+		var posY = Math.sin(sphere.rotation.y);
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.z += posY;
+		sphere.position.y += posZ;
+	}
+
 });
 
 /*
@@ -163,6 +173,7 @@ var createScene = function () {
 			sphere.position.x -= playerSpeed;
 		}
 		else {
+			
 		}
 	}));
 */
