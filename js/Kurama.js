@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (BABYLON.Engine.isSupported()) {
-    	backgroundMusic.play();
+    	// backgroundMusic.play();
         initScene();
     }
 }, false);
@@ -107,7 +107,7 @@ var createScene = function () {
     plane5.material = materialPlane;
     plane6.material = materialPlane;
 
-	var keys={letft:0,right:0,backwards:0,forward:0,up:0};
+	var keys={letft:0,right:0,backwards:0,forward:0,up:0,down:0};
 	window.addEventListener('keydown',function(event){
 		var ch = String.fromCharCode(event.keyCode);
 			if (ch == "A") keys.left=1;
@@ -115,6 +115,7 @@ var createScene = function () {
 			if (ch == "S") keys.backwards=1;
 			if (ch == "W") keys.forward=1;
 			if (ch == "E") keys.up=1;
+			if (ch == "Q") keys.down=1;
 		}); 
 	window.addEventListener('keyup',function(event){
 		var ch = String.fromCharCode(event.keyCode);
@@ -123,6 +124,7 @@ var createScene = function () {
 			if (ch == "S") keys.backwards=0;
 			if (ch == "W") keys.forward=0;
 			if (ch == "E") keys.up=0;
+			if (ch == "Q") keys.down=0;
 		}); 
 	scene.registerBeforeRender(function(){
 		if (keys.forward==1){
@@ -155,7 +157,12 @@ var createScene = function () {
 		sphere.position.z += posY;
 		sphere.position.y += posZ;
 	}
-
+		if (keys.up==1){
+		var posY = Math.sin(sphere.rotation.y);
+		var posZ = Math.cos(sphere.rotation.y);
+		sphere.position.z -= posY;
+		sphere.position.y -= posZ;
+	}
 });
 
 /*
