@@ -157,12 +157,14 @@ var createScene = function () {
 		sphere.position.z += posY;
 		sphere.position.y += posZ;
 	}
-		if (keys.up==1){
+		if (keys.down==1){
 		var posY = Math.sin(sphere.rotation.y);
 		var posZ = Math.cos(sphere.rotation.y);
 		sphere.position.z -= posY;
 		sphere.position.y -= posZ;
 	}
+
+	// you lie
 });
 
 /*
