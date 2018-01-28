@@ -899,7 +899,7 @@ ul.portfolio-image li .desc{
 }
 
 .wrap-about .w-content td{
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 }
 .wrap-about .w-content td.title{
@@ -913,14 +913,14 @@ ul.portfolio-image li .desc{
   height: 35px;
 }
 .wrap-about .head-about {
-  font-size: 16px;
-  line-height: 34px;
+  font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.5px;
   font-weight: 300;
   text-align: center;
 }
 .wrap-about .name {
-  margin: 40px 0 20px 0;
+  margin: 0px 0 0px 0;
   font-size: 18px;
   text-align: center;
 }
