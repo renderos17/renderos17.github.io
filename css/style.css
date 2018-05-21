@@ -607,7 +607,7 @@ ul.portfolio-image {
   margin: 0;
 }
 ul.portfolio-image li {
-  float: left;
+  float: center;
   display: block;
   list-style: none;
   position: relative;
@@ -620,9 +620,9 @@ ul.portfolio-image li:hover {
 }
 ul.portfolio-image li:hover img {
   -webkit-filter: grayscale(0%);
-  transform: scale(1.20);
+  transform: scale(1.05);
 }
-ul.portfolio-image li:hover .image-bg {opacity: 0.7;}
+ul.portfolio-image li:hover .image-bg {opacity: 0.5;}
 ul.portfolio-image li:hover .description-wrap {
   background: rgba(150, 150, 150, 0.1);
 }
@@ -867,10 +867,7 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../assets/HomeSquare.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url('../assets/you003.png');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
