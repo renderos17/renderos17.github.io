@@ -613,7 +613,7 @@ ul.portfolio-image li {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  padding-top: 46%;
+  padding-top: 50%;
 }
 ul.portfolio-image li:hover {
   cursor: pointer;
@@ -782,7 +782,7 @@ ul.portfolio-image li .desc{
 }
 .grid-item {
   width: 33.333%;
-  float: left;
+  float: center;
   top: 0px;
   left: 0px;
   overflow: hidden;
@@ -867,9 +867,8 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../assets/you003.png');
+  background: url('../assets/you003.png') no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
   padding: 0;
   margin: 0;
