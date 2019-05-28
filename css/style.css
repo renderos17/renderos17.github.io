@@ -53,20 +53,20 @@ body {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 1.7;
-  background: linear-gradient(to bottom, #000000 0%, #1A1A20 100%);
+  background: #1a1a1d;
 }
 a {
-  color: #4f4f4f;
+  color: #f1be48;
   text-decoration: none;
-  transition: ease .6s;
-  -webkit-transition: ease .6s;
-  -moz-transition: ease .6s;
-  -o-transition: ease .6s;
-  -ms-transition: ease .6s;
+  transition: ease 0.75s;
+  -webkit-transition: ease 0.75s;
+  -moz-transition: ease 0.75s;
+  -o-transition: ease 0.75s;
+  -ms-transition: ease 0.75s;
 }
 a:hover {
   text-decoration: none;
-  color: #D1D1D1;
+  color: #c8102e;
 }
 a:focus {
   outline: none;
@@ -84,29 +84,7 @@ img { max-width: 100%; }
 
 /*----------------------------------------- 2) Preloader --------------------------------------------------*/
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  z-index: 999999;
-}
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background-image: url(../images/loader.gif);
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-align: center;
-  margin: -40px 0 0 -100px;
-}
-#status img {
-  text-align: center;
-  margin-top: -80px;
+
 }
 
 /*----------------------------------------- 3) Helper --------------------------------------------------*/
@@ -116,7 +94,7 @@ img { max-width: 100%; }
 .mar-tm-10{ margin-top: -10px;}
 
 .white-col{
-  background: linear-gradient(to bottom, #000000 0%, #1A1A20 100%);
+  background: #1a1a1d;
   padding: none;
 }
 
@@ -144,19 +122,15 @@ img { max-width: 100%; }
 }
 /*----- background ------*/
 .grey-bg {
-  background: #1A1A20;
-  padding: 120px 0;
+  background: #1a1a1d;
+  padding: 80px 0;
   display: block;
 }
-.white-bg {
-  background: #1A1A20;
-  padding: 120px 0;
-  display: block;
-}
+
 /*-------- content --------*/
 .content-detail {
   font-weight: 400;
-  margin-top: 70px;
+  margin-top: 40px;
   line-height: 30px;
   font-size: 14px;
   letter-spacing: 0.4px;
@@ -168,7 +142,7 @@ img { max-width: 100%; }
   font-size: 14px;
 }
 .pad-bottom {
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
 .text-detail {
   margin-top: 30px;
@@ -193,15 +167,15 @@ img { max-width: 100%; }
   z-index: -1;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  opacity: 0.8;
+  height: 55px;
+  opacity: 1;
   z-index: 1;
   top: 0;
   left: 0;
-  border-bottom: 2px solid #a0a0a0;
+  border-bottom: 10px solid #f1be48;
   display: block;
-  padding: 0px 15px 5px 15px;
-  background: #000000;
+  padding: 0px 15px 15px 15px;
+  background: #c8102e;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -331,7 +305,7 @@ img { max-width: 100%; }
 }
 .menu,
 .menu-list {
-  height: 100%;     
+  height: 100%;
   overflow-x: auto;
 }
 .menu-list {
@@ -482,20 +456,20 @@ p {
   line-height: 14px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: #cccccc;
+  color: #dddddd;
 }
 .major {
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 0.4px;
-  color: #cccccc;
+  color: #dddddd;
 }
 .company {
   font-size: 12px;
   line-height: 14px;
-  border: 1px solid #ececec;
-  color: #B4B4BF;
+  border: 1px solid white;
+  color: #dddddd;
   padding:8px 10px;
   border-radius: 6px;
   display: inline-block;
@@ -708,7 +682,7 @@ ul.portfolio-image li .desc{
 /*---------- c. experience -----------*/
 .wrap-card {
   position: relative;
-  box-shadow: 0px 0px 0px #818181;
+  box-shadow: 5px 5px 5px #121212;
   transition: all 0.2s ease 0s;
   -webkit-transform: translateY(0px) translateX(0px);
 }
@@ -718,8 +692,8 @@ ul.portfolio-image li .desc{
   position: absolute;
   content: " ";
   width: 100%;
-  height: 3px;
-  background: #a6a6a6;
+  height: 4px;
+  background: #f1be48;
   -webkit-transform: scaleX(0);
   transition: all 0.2s ease;
 }
@@ -734,16 +708,16 @@ ul.portfolio-image li .desc{
   -webkit-transform-origin: 100% 0;
 }
 .wrap-card:hover {
-  box-shadow: 20px 20px 0px #0d0d10;
-  -webkit-transform: translateY(-10px) translateX(-10px);
-  transition: all 0.2s ease 0.4s;
+  box-shadow: 8px 8px 0px #c8102e;
+  -webkit-transform: translateY(-4px) translateX(-4px);
+  transition: all 0.5s ease 0s;
 }
 .wrap-card:hover:after,
 .wrap-card:hover:before {
   -webkit-transform: scaleX(1);
 }
 .card {
-  background: #49494c;
+  background: #2d2d30;
   padding: 30px 35px 45px 35px;
   margin-bottom: 30px;
   border: 1px solid rgba(129, 129, 129, 0.1);
@@ -753,11 +727,11 @@ ul.portfolio-image li .desc{
   display: inline-block;
   position: absolute;
   content: " ";
-  width: 3px;
+  width: 4px;
   height: 100%;
-  background: #818181;
+  background: #f1be48;
   -webkit-transform: scaleY(0);
-  transition: all 0.2s ease 0.2s;
+  transition: all 0.2s ease 0s;
 }
 .card:before {
   top: 0;
@@ -792,10 +766,16 @@ ul.portfolio-image li .desc{
   margin-bottom: 30px;
 }
 .grid-item .wrap-article {
-  border: 5px solid rgba(129, 129, 129, 0.1);
-  background: #919191;
+  border: 5px solid #212121;
+  background: #2d2d30;
   padding: 30px 20px;
 }
+
+.grid-item .wrap-article:hover {
+  transition: all 1s ease 0s;
+  border: 5px solid #f1be48;
+}
+
 .grid-item .wrap-article img {
   text-align: center;
   display: block;
@@ -819,10 +799,10 @@ ul.portfolio-image li .desc{
 .grid-item .wrap-article .fancy span:before,
 .grid-item .wrap-article .fancy span:after {
   content: "";
-  margin-top: 1px;
+  margin-top: 4px;
   position: absolute;
   height: 5px;
-  border-top: 1px solid #dedede;
+  border-top: 1px solid #FFFFFF;
   top: 0;
   width: 60%;
 }
@@ -835,7 +815,7 @@ ul.portfolio-image li .desc{
   margin-left: 5px;
 }
 .grid-item .wrap-article .title {
-  font-size: 16px;
+  font-size: 18px;
   padding: 0 10px 0 10px;
   text-align: center;
   letter-spacing: 0.1;
@@ -847,15 +827,15 @@ ul.portfolio-image li .desc{
   content: "";
   display: block;
   margin: 0 auto;
-  bottom: -20px;
+  bottom: 0px;
   height: 1px;
-  background: #000000;
-  width: 48px;
+  background: #ffffff;
+  width: 80px;
   left: 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .grid-item .wrap-article .content-blog {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 0 10px 0 10px;
   text-align: justify;
   color: #FFFFFF;
@@ -891,7 +871,7 @@ ul.portfolio-image li .desc{
   transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%); 
+  -ms-transform: translateX(-50%);
 }
 
 .wrap-about .w-content td{
