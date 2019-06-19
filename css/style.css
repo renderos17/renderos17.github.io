@@ -585,35 +585,94 @@ p {
 .typed-cursor{ opacity: 0;}
 
 
-/*----------------------------------------- 7) Sections --------------------------------------------------*/
-/*---------- a. portfolio -----------*/
-ul.portfolio-image {
+
+a.portfolio-image {
+  color: #ffffff;
   list-style: none;
   position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
 }
-ul.portfolio-image li {
+
+a.portfolio-image img {
   float: center;
   display: block;
   list-style: none;
   position: relative;
   display: inline-block;
   overflow: hidden;
+  height: 100%;
+}
+
+a.portfolio-image div.image:hover {
+  cursor: pointer;
+}
+
+a.portfolio-image div.image:hover img {
+  -webkit-filter: grayscale(0%);
+  transform: scale(1.01);
+}
+
+a.portfolio-image div.image:hover .image-bg {
+  opacity: 0.0;
+}
+
+a.portfolio-image div.image:hover .description-wrap {
+  background: rgba(0,0,0, 0.0);
+}
+
+a.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-filter: grayscale(100%);
+  transition: filter, transform, 0.5s;
+}
+
+a.portfolio-image img .decription-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  transition: background, 0.5s;
+}
+
+/*----------------------------------------- 7) Sections --------------------------------------------------*/
+/*---------- a. portfolio -----------*/
+ul.portfolio-image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul.portfolio-image li {
+  overflow: hidden;
+  height: 100%;
   padding-top: 50%;
 }
+
 ul.portfolio-image li:hover {
   cursor: pointer;
 }
+
 ul.portfolio-image li:hover img {
   -webkit-filter: grayscale(0%);
   transform: scale(1.05);
 }
-ul.portfolio-image li:hover .image-bg {opacity: 0.5;}
-ul.portfolio-image li:hover .description-wrap {
-  background: rgba(150, 150, 150, 0.1);
+
+ul.portfolio-image li:hover .image-bg {
+  opacity: 0.0;
 }
+
+ul.portfolio-image li:hover .description-wrap {
+  background: rgba(0,0,0, 0.0);
+}
+
 ul.portfolio-image li img {
   position: absolute;
   width: 100%;
@@ -623,16 +682,18 @@ ul.portfolio-image li img {
   -webkit-filter: grayscale(100%);
   transition: filter, transform, 0.5s;
 }
+
 ul.portfolio-image li .decription-wrap {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(242, 242, 242, 0.4);
+  background: rgba(255, 255, 255, 0.0);
   padding: 20px;
   transition: background, 0.5s;
 }
+
 ul.portfolio-image li .image-bg {
   color: #2f2f2f;
   background: #000000;
