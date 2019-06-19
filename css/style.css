@@ -444,6 +444,20 @@ p {
   margin: 0 auto;
   opacity: 0.6;
 }
+.title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #dddddd;
+}
 .year {
   font-size: 26px;
   font-weight: 500;
