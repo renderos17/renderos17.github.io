@@ -642,6 +642,48 @@ a.portfolio-image img .decription-wrap {
   transition: background, 0.5s;
 }
 
+a.portfolio-image div.image:hover .image-bg {
+  opacity: 0.0;
+}
+
+a.portfolio-image h2 .image-bg {
+  color: #2f2f2f;
+  background: #000000;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 10px 0;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  transition: opacity, 0.5s;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  color: transparent;
+}
+
+a.portfolio-image h2 .desc{
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 0;
+  display: table-cell;
+  right: 0;
+  text-align: center;
+  color: #2f2f2f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 /*----------------------------------------- 7) Sections --------------------------------------------------*/
 /*---------- a. portfolio -----------*/
 ul.portfolio-image {
