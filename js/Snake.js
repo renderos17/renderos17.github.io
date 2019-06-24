@@ -30,9 +30,9 @@ $(function(){
     x: 0,
     y: 0
   };
-  var audio = new Audio('Background.mp3');
-  var death = new Audio('Death.mp3');
-  var grow = new Audio('Grow.mp3');
+  var audio = new Audio('/assets/Background.mp3');
+  var death = new Audio('/assets/Death.mp3');
+  var grow = new Audio('/assets/Grow.mp3');
   var snake,
       size = 10,
       speed = 0.1,
