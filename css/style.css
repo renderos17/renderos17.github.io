@@ -625,18 +625,15 @@ a.portfolio-image div.image:hover .description-wrap {
 a.portfolio-image img {
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
   -webkit-filter: grayscale(100%);
   transition: filter, transform, 0.5s;
 }
 
 a.portfolio-image img .decription-wrap {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.25);
   padding: 20px;
   transition: background, 0.5s;
@@ -661,7 +658,7 @@ a.portfolio-image h2 .image-bg {
   top: 50%;
   left: 50%;
   padding: 10px 0;
-  position: relative;
+  position: absolute;
   margin: 0 auto;
   text-align: center;
   opacity: 0;
@@ -673,11 +670,11 @@ a.portfolio-image h2 .image-bg {
 
 a.portfolio-image h2 .desc{
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
-  top: 45%;
-  left: 0;
   display: table-cell;
-  right: 0;
   text-align: center;
   color: #2f2f2f;
   font-size: 14px;
