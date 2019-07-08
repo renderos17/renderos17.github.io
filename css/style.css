@@ -34,9 +34,9 @@ TABLE OF CONTENTS:
   --main-bg-color: #1a1a1d;
   --secondary-bg-color: #dedede;
   --tertiary-bg-color: #2d2d30;
-  --main-accent-color: #304A78;
-  --secondary-accent-color: #FFFFFF;
-  --tertiary-accent-color: #FFFFFF;
+  --main-accent-color: #C8102E;
+  --secondary-accent-color: #F1BE48;
+  --tertiary-accent-color: #F1BE48;
 }
 *,
 *:after,
@@ -201,7 +201,7 @@ img { max-width: 100%; }
   display: block;
 }
 .opacity-nav {
-  opacity: 0.8;
+  opacity: 1;
   z-index: 2;
 }
 /*----------- panel ----------*/
