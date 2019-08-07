@@ -458,13 +458,13 @@ p {
   text-transform: uppercase;
   color: #dddddd;
 }
-.year {
+.job {
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
 }
-.job {
+.year {
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
@@ -961,7 +961,7 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../assets/you004.jpg') no-repeat center; /*wat*/
+  background: url('../assets/you012.jpeg') no-repeat center; /*wat*/
   background-size: cover;
   position: relative;
   padding: 0;
