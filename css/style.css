@@ -982,33 +982,37 @@ ul.portfolio-image li .desc{
   height: 100%;
   float: center;
 }
+
 .wrap-about {
+  background: #1a1a1d
+  padding: 0;
+  margin: 0;
+  min-height: 660px;
+  width: 100%;
   height: 100%;
   width: 100%;
-  position: relative;
-  display: block;
-  min-height: 480px;
+  height: inherit;
 }
+
 .wrap-about .w-content{
   position: absolute;
-  left: 50%;
+  width: 80%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrap-about .w-content td{
   font-size: 14px;
   font-weight: 300;
+  width: inherit;
 }
 .wrap-about .w-content td.title{
-  padding-right: 20px;
+  padding-right: 10px;
   font-weight: 500;
 }
 .wrap-about .w-content td.break{
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .wrap-about .w-content tr{
   height: 35px;
@@ -1026,7 +1030,7 @@ ul.portfolio-image li .desc{
   text-align: center;
 }
 /*---------- f. contact -----------*/
-#contact {padding: 120px 0 200px 0;}
+#contact {padding: 40px 0 120px 0;}
 #contact form {
   margin-top: 25px;
 }
