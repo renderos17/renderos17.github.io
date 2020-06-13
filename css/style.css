@@ -464,6 +464,14 @@ p {
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
 }
+.name {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #FFFFFF
+}
 .year {
   font-size: 14px;
   font-weight: 500;
@@ -646,7 +654,7 @@ a.portfolio-image div.image:hover .image-bg {
   opacity: 0.0;
 }
 
-a.portfolio-image h2 .image-bg {
+a.portfolio-image h2.image-bg {
   color: #2f2f2f;
   background: #000000;
   background: rgba(255, 255, 255, 0.9);
@@ -671,7 +679,7 @@ a.portfolio-image h2 .image-bg {
   color: transparent;
 }
 
-a.portfolio-image h2 .desc{
+a.portfolio-image h2.desc{
   position: absolute;
   z-index: 1;
   top: 45%;
