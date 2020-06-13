@@ -965,6 +965,10 @@ ul.portfolio-image li .desc{
   text-align: justify;
   color: #FFFFFF;
 }
+
+.grid-item .wrap-article h3 {
+  color: #f1be48;
+}
 /*---------- e. quote -----------*/
 #about{
   min-height: 650px;
