@@ -464,6 +464,14 @@ p {
   margin-bottom: 10px;
   font-family: 'Roboto', sans-serif;
 }
+.name {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #FFFFFF
+}
 .year {
   font-size: 14px;
   font-weight: 500;
@@ -646,7 +654,7 @@ a.portfolio-image div.image:hover .image-bg {
   opacity: 0.0;
 }
 
-a.portfolio-image h2 .image-bg {
+a.portfolio-image h2.image-bg {
   color: #2f2f2f;
   background: #000000;
   background: rgba(255, 255, 255, 0.9);
@@ -671,7 +679,7 @@ a.portfolio-image h2 .image-bg {
   color: transparent;
 }
 
-a.portfolio-image h2 .desc{
+a.portfolio-image h2.desc{
   position: absolute;
   z-index: 1;
   top: 45%;
@@ -957,6 +965,10 @@ ul.portfolio-image li .desc{
   text-align: justify;
   color: #FFFFFF;
 }
+
+.grid-item .wrap-article h3 {
+  color: #f1be48;
+}
 /*---------- e. quote -----------*/
 #about{
   min-height: 650px;
@@ -974,33 +986,37 @@ ul.portfolio-image li .desc{
   height: 100%;
   float: center;
 }
+
 .wrap-about {
+  background: #1a1a1d
+  padding: 0;
+  margin: 0;
+  min-height: 660px;
+  width: 100%;
   height: 100%;
   width: 100%;
-  position: relative;
-  display: block;
-  min-height: 480px;
+  height: inherit;
 }
+
 .wrap-about .w-content{
   position: absolute;
-  left: 50%;
+  width: 80%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrap-about .w-content td{
   font-size: 14px;
   font-weight: 300;
+  width: inherit;
 }
 .wrap-about .w-content td.title{
-  padding-right: 20px;
+  padding-right: 10px;
   font-weight: 500;
 }
 .wrap-about .w-content td.break{
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .wrap-about .w-content tr{
   height: 35px;
@@ -1018,7 +1034,7 @@ ul.portfolio-image li .desc{
   text-align: center;
 }
 /*---------- f. contact -----------*/
-#contact {padding: 120px 0 200px 0;}
+#contact {padding: 40px 0 120px 0;}
 #contact form {
   margin-top: 25px;
 }
@@ -1311,3 +1327,13 @@ ul.portfolio-image li .desc{
 }
 .skillst .count-bar .count { background-color: #818181;}
 .skillst .count-bar .count span:after { border-top: 4px solid #818181;}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
