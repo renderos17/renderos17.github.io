@@ -592,7 +592,15 @@ p {
 /*----- typed effect ---*/
 .typed-cursor{ opacity: 0;}
 
-
+a.goodreads-image img {
+  float: center;
+  display: block;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+}
 
 a.portfolio-image {
   color: #ffffff;
@@ -1336,4 +1344,20 @@ ul.portfolio-image li .desc{
 #content-desktop {display: none;}
 #content-mobile {display: block;}
 
+}
+
+.gr_grid_container {
+  /* customize grid container div here. eg: width: 500px; */
+  height: 102px;
+  width: 272px;
+  margin: auto;
+}
+
+.gr_grid_book_container {
+  /* customize book cover container div here */
+  float: left;
+  width: 68px;
+  height: 102px;
+  padding: 0px 0px;
+  overflow: hidden;
 }
