@@ -25,7 +25,7 @@
 
 	/*---- quote -----*/
 	.wrap-about{
-		min-height: 300px !important;
+
 	}
 	.wrap-about .w-content{
 	}
@@ -64,9 +64,9 @@
 	.grid-item {width: 50%;}
 
   /*------- about -------*/
-  .bg-about{min-height: 520px;}
+  .bg-about{min-height: 660px;}
   .wrap-about{
-  	min-height: 520px;
+  	min-height: 660px;
   }
 
   .content-right{ margin-top: 20px; }
