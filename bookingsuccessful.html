@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146115161-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146115161-1');
+
+      function URLParam( $atts ) {
+      extract( shortcode_atts( array(
+          'param' => 'param',
+      ), $atts ) );
+      return $_GET[$param];
+      }
+      add_shortcode('URLParam', 'URLParam');
+    </script>
+    <meta charset="utf-8">
+    <title>Alexis J. Renderos</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!--facebook open graph tags-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://renderos.tech" />
+    <meta property="og:title" content="Alexis J. Renderos" />
+    <meta property="og:description" content="Intensely curious, passionate, tenacious, and experienced manager and software engineer."/>
+    <meta property="og:image" content="https://renderos.tech/assets/you011-min.JPG" />
+
+    <!--twitter card tags additive with the og: tags-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" value="renderos.tech"/>
+    <meta name="twitter:title" value="Alexis J. Renderos"/>
+    <meta name="twitter:description" value="Intensely curious, passionate, tenacious, and experienced manager and software engineer."/>
+    <meta name="twitter:image" content="https://renderos.tech/assets/you011-min.JPG"/>
+    <meta name="twitter:url" value="https://renderos.tech"/>
+
+    <meta content="Alexis J. Renderos" name="description">
+    <meta content="Alexis J. Renderos" name="author">
+    <!--styles-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <!--
+
+   ▄▄▄       ██▓    ▓█████ ▒██   ██▒ ██▓  ██████     ██▀███  ▓█████  ███▄    █ ▓█████▄ ▓█████  ██▀███   ▒█████    ██████
+  ▒████▄    ▓██▒    ▓█   ▀ ▒▒ █ █ ▒░▓██▒▒██    ▒    ▓██ ▒ ██▒▓█   ▀  ██ ▀█   █ ▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒▒██▒  ██▒▒██    ▒
+  ▒██  ▀█▄  ▒██░    ▒███   ░░  █   ░▒██▒░ ▓██▄      ▓██ ░▄█ ▒▒███   ▓██  ▀█ ██▒░██   █▌▒███   ▓██ ░▄█ ▒▒██░  ██▒░ ▓██▄
+  ░██▄▄▄▄██ ▒██░    ▒▓█  ▄  ░ █ █ ▒ ░██░  ▒   ██▒   ▒██▀▀█▄  ▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌▒▓█  ▄ ▒██▀▀█▄  ▒██   ██░  ▒   ██▒
+   ▓█   ▓██▒░██████▒░▒████▒▒██▒ ▒██▒░██░▒██████▒▒   ░██▓ ▒██▒░▒████▒▒██░   ▓██░░▒████▓ ░▒████▒░██▓ ▒██▒░ ████▓▒░▒██████▒▒
+   ▒▒   ▓▒█░░ ▒░▓  ░░░ ▒░ ░▒▒ ░ ░▓ ░░▓  ▒ ▒▓▒ ▒ ░   ░ ▒▓ ░▒▓░░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░
+    ▒   ▒▒ ░░ ░ ▒  ░ ░ ░  ░░░   ░▒ ░ ▒ ░░ ░▒  ░ ░     ░▒ ░ ▒░ ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒  ░ ░  ░  ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
+    ░   ▒     ░ ░      ░    ░    ░   ▒ ░░  ░  ░       ░░   ░    ░      ░   ░ ░  ░ ░  ░    ░     ░░   ░ ░ ░ ░ ▒  ░  ░  ░
+        ░  ░    ░  ░   ░  ░ ░    ░   ░        ░        ░        ░  ░         ░    ░       ░  ░   ░         ░ ░        ░
+
+
+    -->
+
+    <!--HEADER -->
+    <div class="header">
+      <div class="for-sticky">
+      </div>
+    </div>
+    <!--/.HEADER END-->
+
+    <!--CONTENT WRAP-->
+    <div class="content-wrap">
+      <!--CONTENT-->
+      <div class="content">
+        <div class="row">
+          <br>
+          <br>
+          <br>
+          <h3 class="title-small-center text-center">
+            <span>Booking Successful!</span>
+          </h3>
+          <br>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <ul class="listing-item">
+                <li>
+                  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <a href="./index.html">
+                      <div class="wrap-card">
+                        <div class="card">
+                          <img src="assets/portrait.jpeg" alt="headshot" style="border-radius: 10%; display: block; margin-left: auto; margin-right: auto; width: 90%;">
+                          <hr>
+                          <div class="text-detail" style="text-align: center">
+                            <p>
+                              Thanks for booking some time to speak with me! Looking forward to seeing you soon.
+                              <br>
+                              If you were interested in learning more about me, tap here!
+                            </p>
+                            <p>[URLParam param='event_start_time']</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--/.CONTENT-WRAP END-->
+    </div>
+
+
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.appear.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/classie.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
+    <script src="js/masonry.js" type="text/javascript"></script>
+    <script src="js/smooth-scroll.min.js" type="text/javascript"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
