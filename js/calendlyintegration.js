@@ -6,7 +6,7 @@ function convertUTCDateToLocalDate(date) {
 
 
 let params = new URLSearchParams(location.search);
-let appointmentName = params.get('assigned_to');
+let appointmentName = params.get('invitee_full_name');
 appointmentName = appointmentName.substring(0, appointmentName.indexOf(" "));
 document.getElementById("name").innerHTML = appointmentName;
 let appointmentDate = new Date(Date.parse(params.get('event_start_time')));
