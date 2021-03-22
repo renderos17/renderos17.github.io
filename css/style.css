@@ -98,28 +98,6 @@ img { max-width: 100%; }
   padding: none;
 }
 
-/*---- span -----*/
-.title-small span { position: relative;}
-.title-small span:after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  height: 3px;
-  background: #DEDEDE;
-  width: 28px;
-  left: 0;
-}
-.title-small-center span {position: relative;}
-.title-small-center span:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-  height: 3px;
-  background: #DEDEDE;
-  width: 28px;
-  left: 0;
-}
 /*----- background ------*/
 .grey-bg {
   background: #1a1a1d;
@@ -928,50 +906,20 @@ ul.portfolio-image li .desc{
   line-height: 0.5;
   text-align: center;
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 15px;
   color: #FFFFFF;
 }
 .grid-item .wrap-article .fancy span {
   display: inline-block;
   position: relative;
 }
-.grid-item .wrap-article .fancy span:before,
-.grid-item .wrap-article .fancy span:after {
-  content: "";
-  margin-top: 4px;
-  position: absolute;
-  height: 5px;
-  border-top: 1px solid #FFFFFF;
-  top: 0;
-  width: 60%;
-}
-.grid-item .wrap-article .fancy span:before {
-  right: 100%;
-  margin-right: 5px;
-}
-.grid-item .wrap-article .fancy span:after {
-  left: 100%;
-  margin-left: 5px;
-}
 .grid-item .wrap-article .title {
   font-size: 18px;
-  padding: 0 10px 0 10px;
   text-align: center;
   letter-spacing: 0.1;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: 700;
-}
-.grid-item .wrap-article .title:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  bottom: 0px;
-  height: 1px;
-  background: #ffffff;
-  width: 80px;
-  left: 0;
-  margin-top: 20px;
 }
 .grid-item .wrap-article .content-blog {
   margin-top: 20px;
